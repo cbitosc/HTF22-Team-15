@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +28,7 @@
 }
 .img-left{
     width: 40%;
-    background: url('img.png') center;
+    background: url("{% static 'student/images/img.png' %} ") center;
     background-size: cover;
     padding: 20%;
 }
