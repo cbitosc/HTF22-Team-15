@@ -10,5 +10,6 @@ urlpatterns = [
     path('company/',views.Companydetails),
     path('logout/',views.logout_request),
     
+    
 
 ]
