@@ -33,7 +33,7 @@ def login(request):
         if user is not None:
             return redirect('/')
         else:
-            return render(request,'index.html')
+            return render(request,'login.html')
     return render(request,'login.html')
 def logout_view(request):
     logout(request)
