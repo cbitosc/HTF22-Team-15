@@ -2,7 +2,7 @@ from email.policy import default
 from turtle import mode
 from unittest.util import _MAX_LENGTH
 from django.db import models
-
+from datetime import datetime  
 # Create your models here.
 class Student(models.Model):
     name = models.CharField(max_length=100)
@@ -18,11 +18,11 @@ class Student(models.Model):
 
 class Company(models.Model):
     name = models.CharField(max_length=100)
-    date=models.DateField()
+    date=models.DateField(default=datetime.now())
     cutoff = models.FloatField()
     year=models.IntegerField()
-    package=models.IntegerField()
-    role=models.CharField(max_length=100)
+    package=models.FloatField(default=5.6)
+    role=models.CharField(max_length=100,default='Not available')
     desc=models.CharField(max_length=500,default='Not available')
     
 

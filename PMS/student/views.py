@@ -28,8 +28,8 @@ def home(request):
         #returning the companies he got shorlisted.
         return render('index.html', {'shortlist':temp})
 def index(request):
-    '''if request.user.is_anonymous:
-        return redirect('/login')'''
+    if request.user.is_anonymous:
+        return redirect('/login')
     return render(request,'login.html')
 def login(request):
     if request.method=="POST":
