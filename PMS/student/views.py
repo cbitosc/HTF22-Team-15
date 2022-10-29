@@ -47,9 +47,7 @@ def login(request):
             messages.error(request, "Invalid username or password")
     form=AuthenticationForm()
     return render(request,'login.html')
-def logout_view(request):
-    logout(request)
-    return redirect('/login')
+
 def studentpage(request):
     m=Student.objects.all()
     m1=Company.objects.all()
@@ -58,5 +56,8 @@ def studentpage(request):
 def Companydetails(request):
     company=Company.objects.all().values()
     return render(request,'student.html',{'m':company}) 
-
+def logout_request(request):
+    logout(request)
+    messages.info(request, "Logged out successfully!")
+    return redirect("/")
     
