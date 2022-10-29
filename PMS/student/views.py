@@ -50,12 +50,10 @@ def login(request):
 
 def studentpage(request):
     m=Student.objects.all()
-    m1=Company.objects.all()
-    model_combination = m.union(m1, all=True).values()
-    return render(request,'student.html',{'m':model_combination})  
+    return render(request,'student.html',{'m':m})  
 def Companydetails(request):
     company=Company.objects.all().values()
-    return render(request,'student.html',{'m':company}) 
+    return render(request,'student.html',{'n':company}) 
 def logout_request(request):
     logout(request)
     messages.info(request, "Logged out successfully!")
