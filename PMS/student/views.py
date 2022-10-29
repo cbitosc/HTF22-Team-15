@@ -52,8 +52,10 @@ def login_user(request):
 
     return render(request, 'login.html')
 def studentpage(request):
-    m=Student.objects.all()
-    return render(request,'student.html',{'m':m})  
+   
+    return render(request,'dashboard.html') 
+    ''' m=Student.objects.all()
+    return render(request,'student.html',{'m':m})'''
 def Companydetails(request):
     company=Company.objects.all().values()
     return render(request,'student.html',{'n':company}) 
