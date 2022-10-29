@@ -8,6 +8,10 @@ from django.contrib.auth import authenticate,logout,login
 from django.http import HttpResponse
 from .models import *
 # Create your views here.
+def homepage(request):
+    return render(request,'home.html')
+
+#bala's code
 def home(request):
     if request.POST :
         sname = request.POST['name']
@@ -50,6 +54,9 @@ def studentpage(request):
     m=Student.objects.all()
     m1=Company.objects.all()
     model_combination = m.union(m1, all=True).values()
-    return render(request,'student.html',{'m':model_combination})   
+    return render(request,'student.html',{'m':model_combination})  
+def Companydetails(request):
+    company=Company.objects.all().values()
+    return render(request,'student.html',{'m':company}) 
 
     
