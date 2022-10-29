@@ -38,4 +38,10 @@ def login(request):
 def logout_view(request):
     logout(request)
     return redirect('/login')
+def studentpage(request):
+    m=Student.objects.all()
+    m1=Company.objects.all()
+    model_combination = m.union(m1, all=True).values()
+    return render(request,'student.html',{'m':model_combination})   
+
     
