@@ -1,0 +1,13 @@
+<h1>Members</h1>
+
+<table border="1">
+{% for x in m %}
+<tr>
+<td>{{ x.rollno }}</td>
+<td>{{x.sname}}</td>
+<td>{{x.cname}}</td>
+<td>{{x.status}}</td>
+</tr>
+{% endfor %}
+</table>
+
