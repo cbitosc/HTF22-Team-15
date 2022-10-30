@@ -52,7 +52,7 @@ def studentpage(request):
     m=Student.objects.all()
     return render(request,'student.html',{'m':m})  
 def Companydetails(request):
-    company=Company.objects.all().values()
+    company=Company.objects.all()
     return render(request,'student.html',{'n':company}) 
 def logout_request(request):
     logout(request)
