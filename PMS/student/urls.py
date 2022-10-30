@@ -12,7 +12,7 @@ urlpatterns = [
     path('login',views.login_user),
     path('adduser',views.adduser),
     path('shortlist',views.shortlist),
-    path('apply/<str:cname>',views.apply)
+    path('apply/<str:name>',views.apply)
     
 
 ]

@@ -104,8 +104,16 @@ def shortlist(request):
     m=Application.objects.filter(rollno=username).values()
     return render(request,'student.html',{'m':m})
 
-def apply(request, cname):
-    if request.user.POST:
+def apply(request,name):
+    if request.user.is_anonymous:
+        return redirect('/login')
+    username=request.user.username
+    studentdetails=Student.objects.filter(roll_no=username).values()
+    companydetails=Company.filter(name=name).values()
+    print(studentdetails['name']+companydetails['name'])
+    return HttpResponse(studentdetails['name'])
+
+    ''' if request.user.POST:
         rollno = request.POST['roll_no']
         sname = request.POST['name'] 
         company = Company.objects.filter(cname=cname).values()
@@ -117,7 +125,7 @@ def apply(request, cname):
         application = Application(rollno=rollno,sname=sname,cname=cname,status=status)
         application.save()
         return redirect('/shortlist')
-    return render(request,'registration.html')
+    return render(request,'registration.html')'''
 
 
     
