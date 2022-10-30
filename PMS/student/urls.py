@@ -11,6 +11,7 @@ urlpatterns = [
     path('logout',views.logout_request),
     path('login',views.login_user),
     path('adduser',views.adduser),
+    path('shortlist',views.shortlist)
     
     
 

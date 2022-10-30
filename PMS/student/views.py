@@ -64,27 +64,45 @@ def studentpage(request):
     m=Application.objects.filter(rollno=username).values()
     return render(request,'student.html',{'m':m})
 def Companydetails(request):
-    company=Company.objects.all()
+    if request.user.is_anonymous:
+        return redirect('/login')
+    company=Company.objects.all().values()
     return render(request,'placements.html',{'n':company}) 
 def logout_request(request):
     logout(request)
     messages.info(request, "Logged out successfully!")
-    return HttpResponse("logged out")
+    #return HttpResponse("logged out")
     return redirect("/")
 def adduser(request):
     if request.method=="POST":
         branch=request.POST.get('exampleRadios')
         uname=request.POST.get('rollno')
-        emailid=request.POST.get('email')
+        emailid=request.POST.get('emailid')
         epassword=request.POST.get('password')
-        
+        rollno=request.POST.get('rollno')
+        gpa=request.POST.get('gpa')
+        name=request.POST.get('name')
+        year=request.POST.get('year')
+        student = Student(name=name,email=emailid,roll_no=uname,gpa=gpa,course=branch,year=year)
+        student.save()
+
+
+
         user = User.objects.create_user(username=uname,
                                  email=emailid,
                                  password=epassword)
         
 
         print(branch)
-        return HttpResponse(branch)
+        return redirect('/login')
     return render(request,'form.html')
+
+def shortlist(request):
+    if request.user.is_anonymous:
+        return redirect('/login')
+    username = request.user.username
+    m=Application.objects.filter(rollno=username).values()
+    return render(request,'student.html',{'m':m})
+    
 
     
