@@ -55,7 +55,10 @@ def login_user(request):
 def studentpage(request):
    
     #return render(request,'dashboard.html') 
-    m=Student.objects.filter(roll_no=154).values()
+    if request.user.is_anonymous:
+        return redirect('/login') 
+    username = request.user.username
+    m=Application.objects.filter(rollno=username).values()
     return render(request,'student.html',{'m':m})
 def Companydetails(request):
     company=Company.objects.all()
