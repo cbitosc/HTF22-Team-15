@@ -1,0 +1,271 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{% static 'student/images/img.png' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>CBIT Placement Management System</title>
+    <style>
+      body{
+        background-color:#FDEDEC;
+        font-family: 'Fira Sans', sans-serif;
+      }
+  
+    </style>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <span class="border border-primary" style = "background-color: red;"></span>
+  <nav class="navbar navbar-expand-lg" style="background-color: lightgrey;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="https://www.cbit.ac.in/wp-content/themes/CBIT/images/logo.png" alt="CBIT" width="250">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="https://www.cbit.ac.in/about_post/about/">About Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Placements
+                </a>
+                <ul type = "disc"class="dropdown-menu">
+                  <li><a class="dropdown-item" href="https://www.cbit.ac.in/wp-content/uploads/2019/03/Companies-visited-to-CBIT-06.12.2019.pdf">Recruiting Companies</a></li>
+                  <li><a class="dropdown-item" href="https://www.cbit.ac.in/placement_post/year-wise-placements-2021/">Year Wise Placements</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="https://www.cbit.ac.in/wp-content/uploads/2019/03/Guidelines-06.12.2019.pdf">Hiring Guidelines</a></li>
+                </ul>
+              </li>
+            </ul>
+              <a style = "margin-Right: 10px;" class="nav-link" href="/login"><button type="button" class="btn btn-dark">Login</button>
+              </a>
+          </div>
+        </div>
+    </nav>
+    <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="true" style = "margin-top: 20px; padding: 20px;">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="2000">
+          <img src="https://www.cbit.ac.in/wp-content/uploads/2022/06/De-shaw-placements-banner.jpeg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="https://www.cbit.ac.in/wp-content/uploads/2022/03/2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="https://www.cbit.ac.in/wp-content/uploads/2022/03/ariia-final.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+    <section class="container" style = "margin-top: 40px;">
+      <div class="row">
+        <div class="col-lg-4" style = "background-color: #FDD5DF; padding: 10px;margin: 10 10">
+          <img src="{% static 'student/images/Student.png' %}" width = "40" alt="Students">
+          <h3>Students</h3>
+          <p>Empowers students to create job profiles, upload resumes, search and apply for jobs and internships with real-time status tracking from anywhere and anytime.</p>
+        </div>
+        <div class="col-lg-4" style = "background-color: #CAE9F5; padding: 10px; margin:10 10 10 10">
+          <img src="{% static 'student/images/People.png' %}" width = "40" alt="Placement">
+          <h3>Placements Team</h3>
+          <p>Manage several companies from a centralized place; capture data and reports related to students and employers in a single click, securely.</p>
+        </div>
+        <div class="col-lg-4" style = "background-color: #C7F6B6; padding: 10px; margin: 10 10 10 10">
+          <img src="{% static 'student/images/Companies.png' %}" width = "40" alt="Companies">
+          <h3>Companies</h3>
+          <p>Easily screen students for exact requirements and get access to the entire student database.</pa>
+        </div>
+      </div>
+    </section>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style = "margin-top: 20px; padding: 20px;">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner" style = "background-color: #ECECEC;">
+        <h3 style = "text-align: center">Top Recruiters</h3>
+        <div class="carousel-item active">
+          <div class="row" style = "height:250px; padding-bottom:20px;padding-top:20px;">
+            <div class="col-lg-4" style = " padding-bottom:20px;padding-top:20px;">
+              <img src="{% static 'student/images/accenture.png' %}" style = "width:200px;height:130px;margin: auto;" class="d-block w-75" alt="Accenture">
+            </div>
+            <div class="col-lg-4" style = "padding-bottom:20px;padding-top:20px;">
+              <img src="{% static 'student/images/accolite.png' %}" style = "width:200px;height:130px;margin: auto;" class="d-block w-80" alt="Accenture">
+            </div>
+            <div class="col-lg-4" style = "padding-bottom:20px;padding-top:20px;">
+              <img src="{% static 'student/images/amazon.png' %}" style = "width : 200px;height:130px;margin: auto;"class="d-block w-98" alt="Accenture">
+            </div>
+            
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-lg-4">
+              <img src="{% static 'student/images/google.png' %}" class="d-block w-100" width = "75px" alt="Accenture">
+            </div>
+            <div class="col-lg-4">
+              <img src="{% static 'student/images/byjus.png' %}" class="d-block w-100" width = "75px" alt="Accenture">
+            </div>
+            <div class="col-lg-4">
+              <img src="{% static 'student/images/linkedin.png' %}" class="d-block w-100" width = "75px" alt="Accenture">
+            </div>
+        </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <section class="container" style = "margin-top: 20px;background-color: #DBF3FA;">
+      <h3 style = "padding: 30px;text-align: center;">Placement Highlights</h3>
+      <div class="row">
+        <div class="col-lg-3" style = "padding: 10px;margin: 10 10;">
+          <img src="{% static 'student/images/100+companies.png' %}" style = "margin-left: 120px;" width = "40" alt="Students">
+          <h3 style = "margin-left: 110px;">140+</h3>
+          <p style = "margin-left: 100px;">Companies</p>
+        </div>
+        <div class="col-lg-3" style = "padding: 10px; margin:10 10 10 10">
+          <img src="{% static 'student/images/dream-companies.png' %}" style = "margin-left: 140px;" width = "40" alt="Placement">
+          <h3 style = "margin-left: 125px;">2000+</h3>
+          <p style = "margin-left: 100px;">Placement Offers</p>
+        </div>
+        <div class="col-lg-3" style = "padding: 10px; margin: 10 10 10 10">
+          <img src="{% static 'student/images/sp.png' %}" style = "margin-left: 130px;" width = "40" alt="Companies">
+          <h3 style = "margin-left: 130px;">54L</h3>
+          <p style = "margin-left: 100px;">Highest Package</pa>
+        </div>
+        <div class="col-lg-3" style = "padding: 10px; margin: 10 10 10 10">
+          <img src="{% static 'student/images/placements.png' %}" style = "margin-left: 135px;" width = "40" alt="Companies">
+          <h3 style = "margin-left: 130px;">85%</h3>
+          <p style = "margin-left: 100px;">of Placement Rate</pa>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center text-lg-start text-muted" style="background-color:  #D5F5E3 ; margin-top: 20px;">
+      <!-- Section: Social media -->
+      <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+    
+        <!-- Right -->
+        <div>
+          <a href="https://twitter.com/cbithyd?lang=en" class="me-4 link-secondary">
+            <img src ="{% static 'student/images/twitter.png' %}" width = "20">
+          </a>
+          <a href="https://www.google.com/search?q=location%20cbit&rlz=1C1JZAP_enIN935IN935&oq=location+cbit&aqs=chrome..69i57j0i433i512l4j69i60l3.2661j0j7&sourceid=chrome&ie=UTF-8&tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=ALiCzsZzKPQa-XyTPqNb2bS0ctyXNQDcog:1667104200312&rflfq=1&num=10&rldimm=13226880710392904901&lqi=Cg1sb2NhdGlvbiBjYml0SIrPuQVaEBAAGAAiBGNiaXQqBAgCEACSAQdjb2xsZWdlmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU5QTkZwWU16QjNSUkFCqgEMEAEqCCIEY2JpdCgA&ved=2ahUKEwjE3KaNj4f7AhW9-DgGHc4YAOgQvS56BAgMEAE&sa=X&rlst=f#rlfi=hd:;si:13226880710392904901,l,Cg1sb2NhdGlvbiBjYml0SIrPuQVaEBAAGAAiBGNiaXQqBAgCEACSAQdjb2xsZWdlmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU5QTkZwWU16QjNSUkFCqgEMEAEqCCIEY2JpdCgA;mv:[[17.562602719825207,78.53623956608092],[17.236300300708862,77.8482207672528],null,[17.39952430293202,78.19223016666686],11]" class="me-4 link-secondary">
+            <img src ="{% static 'student/images/google.png' %}" width = "20">
+          </a>
+          <a href="https://www.linkedin.com/school/chaitanya-bharathi-institute-of-technology/?originalSubdomain=in" class="me-4 link-secondary">
+            <img src ="{% static 'student/images/linkedin.png' %}" width = "20">
+          </a>
+          <a href="https://github.com/cbitosc" class="me-4 link-secondary">
+            <img src ="{% static 'student/images/github.png' %}" width = "20">
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+    
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem lg-1 text-secondary" style="text-align:center;"></i>Chaitanya Bharathi Institute of Technology
+              </h6>
+              <img src = "https://www.cbit.ac.in/wp-content/themes/CBIT/images/logo.png" width = "200">
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                Info
+              </h6>
+              <p>
+                <a href="#!" class="text-reset">Recruitment</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Partners</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Placement Stats</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                Useful links
+              </h6>
+              <p>
+                <a href="#!" class="text-reset">Swayam</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">NPTEL</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Online Grievance</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">AICTE Feedback</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-2 col-xl-3 mx-10 10 10 10 mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p>Gandipet, Hyderbad, Telangana</p>
+              <p>
+                placementcell@cbit.ac.in
+              </p>
+              <p>Phone: 040-24193276</p>
+              <p>Mobile: 8466997201</p>
+              <p>For Admissions Enquiry: 8466997216</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+        © 2021 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">CBIT</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+</body>
+</html>
