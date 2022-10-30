@@ -104,10 +104,9 @@ def shortlist(request):
     m=Application.objects.filter(rollno=username).values()
     return render(request,'student.html',{'m':m})
 
-def apply(request):
-    if request.POST:
-        
-        rollno = request.POST['rollno']
+def apply(request, cname):
+    if request.user.POST:
+        rollno = request.POST['roll_no']
         sname = request.POST['name'] 
         company = Company.objects.get(jobid=jobid)
         print(company)
@@ -120,7 +119,7 @@ def apply(request):
         application = Application(rollno=rollno,sname=sname,cname=company['name'],status=status)
         application.save()
         return redirect('/shortlist')
-    return render(request,'registration.html',{'jobid': int(jobid)})
+    return render(request,'registration.html')
 
 
     

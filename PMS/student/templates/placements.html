@@ -1,8 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/x-icon" href="{% static 'student/images/img.png' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
@@ -25,7 +27,7 @@
   <body>
     <nav
       class="navbar navbar-expand-lg"
-      style="background-color: #d3d3d3; margin-top: 20px"
+      style="background-color: #FDEDEC; margin-top: 20px"
     >
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -78,7 +80,7 @@
           <ul><li>Minimum Cut-Off required: {{x.cutoff}}</li>
           <li>Average Package for the role: {{x.package}} LPA</li></ul>
         </list> </p>
-        <a href="/apply" class="btn btn-primary">Apply</a>
+        <a href="/apply/{{ x.name }}" class="btn btn-primary">Apply</a>
       </div>
     </div>
     <br />
