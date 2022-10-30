@@ -57,8 +57,8 @@ def studentpage(request):
     ''' m=Student.objects.all()
     return render(request,'student.html',{'m':m})'''
 def Companydetails(request):
-    company=Company.objects.all().values()
-    return render(request,'student.html',{'n':company}) 
+    company=Company.objects.all()
+    return render(request,'placements.html',{'n':company}) 
 def logout_request(request):
     logout(request)
     messages.info(request, "Logged out successfully!")
