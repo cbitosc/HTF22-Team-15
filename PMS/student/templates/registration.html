@@ -34,7 +34,7 @@
     </nav>
     <h2 style="margin-left: 10px;padding: 10px;">Student Registration Form</h2><br>
 
-    <form style="margin-left: 10px;padding: 10px;" method="post" action="/apply/<cname>">
+    <form style="margin-left: 10px;padding: 10px;" method="post" action="/apply/{{jobid}}">
       {% csrf_token %}
         <div class="form-group">
             <label for="InputName">Name of the Student</label>
