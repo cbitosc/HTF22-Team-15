@@ -67,11 +67,13 @@ def logout_request(request):
 def adduser(request):
     if request.method=="POST":
         branch=request.POST.get('exampleRadios')
+        username=request.POST.get('rollno')
+        email=request.POST.get('email')
+        password=request.POST.get('password')
+        user = User.objects.create_user(username,email,password,branch)
+
         print(branch)
         return HttpResponse(branch)
     return render(request,'form.html')
-    '''user = User.objects.create_user(username='john',
-                                 email='jlennon@beatles.com',
-                                 password='glass onion')'''
 
     
