@@ -7,6 +7,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate,logout,login
 from django.http import HttpResponse
 from .models import *
+from django.contrib.auth.models import User
 # Create your views here.
 def homepage(request):
     return render(request,'home.html')
@@ -31,32 +32,40 @@ def index(request):
     if request.user.is_anonymous:
         return redirect('/login')
     return render(request,'login.html')
-def login(request):
+def login_user(request):
     if request.method=="POST":
-        form=AuthenticationForm(request,request.POST)
-        if form.is_valid():
-            username=request.POST.get('username')
-            password=request.POST.get('password')
-            user=authenticate(username=username,password=password)
-            if user is not None:
-                login(request,user)
-                return redirect('/')
-            else:
-                messages.error(request, "Invalid username or password")
-        else:
-            messages.error(request, "Invalid username or password")
-    form=AuthenticationForm()
-    return render(request,'login.html')
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        print(username, password)
 
+        # check if user has entered correct credentials
+        user = authenticate(username=username, password=password)
+        
+        if user is not None:
+            # A backend authenticated the credentials
+            login(request,user)
+            return redirect("/student")
+
+        else:
+            # No backend authenticated the credentials
+            return render(request, 'login.html')
+
+    return render(request, 'login.html')
 def studentpage(request):
-    m=Student.objects.all()
-    return render(request,'student.html',{'m':m})  
+   
+    return render(request,'dashboard.html') 
+    ''' m=Student.objects.all()
+    return render(request,'student.html',{'m':m})'''
 def Companydetails(request):
-    company=Company.objects.all().values()
-    return render(request,'student.html',{'n':company}) 
+    company=Company.objects.all()
+    return render(request,'placements.html',{'n':company}) 
 def logout_request(request):
     logout(request)
     messages.info(request, "Logged out successfully!")
     return redirect("/")
+def adduser(request):
+    user = User.objects.create_user(username='john',
+                                 email='jlennon@beatles.com',
+                                 password='glass onion')
 
     
