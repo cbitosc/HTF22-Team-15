@@ -54,9 +54,9 @@ def login_user(request):
     return render(request, 'login.html')
 def studentpage(request):
    
-    return render(request,'dashboard.html') 
-    ''' m=Student.objects.all()
-    return render(request,'student.html',{'m':m})'''
+    #return render(request,'dashboard.html') 
+    m=Student.objects.filter(roll_no=154).values()
+    return render(request,'student.html',{'m':m})
 def Companydetails(request):
     company=Company.objects.all()
     return render(request,'placements.html',{'n':company}) 
@@ -67,11 +67,13 @@ def logout_request(request):
 def adduser(request):
     if request.method=="POST":
         branch=request.POST.get('exampleRadios')
+        username=request.POST.get('rollno')
+        email=request.POST.get('email')
+        password=request.POST.get('password')
+        user = User.objects.create_user(username,email,password,branch)
+
         print(branch)
         return HttpResponse(branch)
     return render(request,'form.html')
-    '''user = User.objects.create_user(username='john',
-                                 email='jlennon@beatles.com',
-                                 password='glass onion')'''
 
     
