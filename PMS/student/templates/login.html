@@ -110,11 +110,12 @@
                         Login
                     </h4>
                     <form class="form-box px-3" method="post" action="/login">
+                        {% csrf_token %}
                         <div class="form-input">
-                            <input type="number" name="username" placeholder="Email Address" tabindex="10" required>
+                            <input type="text" name="username" placeholder="Email Address" tabindex="10" required>
                         </div>
                         <div class="form-input">
-                            <input type="password" name="" placeholder="Password"  required>
+                            <input type="password" name="password" placeholder="Password"  required>
                         </div>
                         <div class="mb-3">
                             <div class="custom-control custom-checkbox">
