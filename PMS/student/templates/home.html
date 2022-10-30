@@ -11,7 +11,8 @@
 </head>
 <body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <nav class="navbar navbar-expand-lg" style="background-color: #D3D3D3;margin-top: 20px;">
+  <span class="border border-primary" style = "background-color: red;"></span>
+  <nav class="navbar navbar-expand-lg" style="background-color: #D3D3D3;">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             <img src="https://www.cbit.ac.in/wp-content/themes/CBIT/images/logo.png" alt="CBIT" width="250">
@@ -29,19 +30,15 @@
                   Placements
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="https://www.cbit.ac.in/wp-content/uploads/2019/03/Companies-visited-to-CBIT-06.12.2019.pdf">Recruiting Companies</a></li>
                   <li><a class="dropdown-item" href="#">Another action</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
             </ul>
-              <a style = "margin-Right: 10px;" class="nav-link" href="#"><button type="button" class="btn btn-dark">Login</button>
+              <a style = "margin-Right: 10px;" class="nav-link" href="/login"><button type="button" class="btn btn-dark">Login</button>
               </a>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
           </div>
         </div>
     </nav>
@@ -99,20 +96,35 @@
       <div class="carousel-inner" style = "background-color: #ECECEC">
         <h3 style = "text-align: center">Top Recruiters</h3>
         <div class="carousel-item active">
-          <img src="{% static 'student/images/accenture.png' %}" class="d-block w-100" width = "75px" alt="Accenture">
+          <div class="row">
+            <div class="col-lg-4">
+              <img src="{% static 'student/images/accenture.png' %}" class="d-block w-100" width = "75px" alt="Accenture">
+            </div>
+            <div class="col-lg-4">
+              <img src="{% static 'student/images/accolite.png' %}" class="d-block w-100" width = "75px" alt="Accenture">
+            </div>
+            <div class="col-lg-4">
+              <img src="{% static 'student/images/amazon.png' %}" class="d-block w-100" width = "75px" alt="Accenture">
+            </div>
+            
         </div>
         <div class="carousel-item">
-          <img src="{% static 'student/images/accolite.png' %}" class="d-block w-100" width = "75px" alt="...">
+          <div class="row">
+            <div class="col-lg-4">
+              <img src="{% static 'student/images/google.png' %}" class="d-block w-100" width = "75px" alt="Accenture">
+            </div>
+            <div class="col-lg-4">
+              <img src="{% static 'student/images/byjus.png' %}" class="d-block w-100" width = "75px" alt="Accenture">
+            </div>
+            <div class="col-lg-4">
+              <img src="{% static 'student/images/linkedin.png' %}" class="d-block w-100" width = "75px" alt="Accenture">
+            </div>
+            
         </div>
-        <div class="carousel-item">
-          <img src="{% static 'student/images/amazon.png' %}" class="d-block w-100" width = "75px" alt="...">
         </div>
-        <div class="carousel-item">
-          <img src="{% static 'student/images/byjus.png' %}" class="d-block w-100" width = "75px" alt="...">
-          <div class="carousel-item">
-            <img src="{% static 'student/images/arcesium.png' %}" class="d-block w-100" width = "75px" alt="...">
-          </div>
-        </div>
+        
+        
+        
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

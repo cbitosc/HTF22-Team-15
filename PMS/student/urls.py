@@ -10,7 +10,7 @@ urlpatterns = [
     path('company',views.Companydetails),
     path('logout',views.logout_request),
     path('login',views.login_user),
-    path('adduser',views.adduser)
+    path('adduser',views.adduser),
     
     
 

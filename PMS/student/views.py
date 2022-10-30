@@ -32,7 +32,10 @@ def home(request):
 def index(request):
     if request.user.is_anonymous:
         return redirect('/login')
-    return render(request,'login.html')
+    username = request.user.username
+    m=Student.objects.filter(roll_no=username).values()
+    print(m)
+    return render(request,'dashboard.html',{'m':m})
 def login_user(request):
     if request.method=="POST":
         username = request.POST.get('username')
@@ -45,7 +48,7 @@ def login_user(request):
         if user is not None:
             # A backend authenticated the credentials
             login(request,user)
-            return redirect("/student")
+            return redirect("/index")
 
         else:
             # No backend authenticated the credentials
@@ -54,24 +57,30 @@ def login_user(request):
     return render(request, 'login.html')
 def studentpage(request):
    
-    return render(request,'dashboard.html') 
-    ''' m=Student.objects.all()
-    return render(request,'student.html',{'m':m})'''
+    #return render(request,'dashboard.html') 
+    if request.user.is_anonymous:
+        return redirect('/login') 
+    username = request.user.username
+    m=Application.objects.filter(rollno=username).values()
+    return render(request,'student.html',{'m':m})
 def Companydetails(request):
     company=Company.objects.all()
     return render(request,'placements.html',{'n':company}) 
 def logout_request(request):
     logout(request)
     messages.info(request, "Logged out successfully!")
+    return HttpResponse("logged out")
     return redirect("/")
 def adduser(request):
     if request.method=="POST":
         branch=request.POST.get('exampleRadios')
+        username=request.POST.get('rollno')
+        email=request.POST.get('email')
+        password=request.POST.get('password')
+        user = User.objects.create_user(username,email,password,branch)
+
         print(branch)
         return HttpResponse(branch)
     return render(request,'form.html')
-    '''user = User.objects.create_user(username='john',
-                                 email='jlennon@beatles.com',
-                                 password='glass onion')'''
 
     
