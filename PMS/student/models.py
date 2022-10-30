@@ -17,6 +17,7 @@ class Student(models.Model):
         return self.name
 
 class Company(models.Model):
+    jobid = models.IntegerField()
     name = models.CharField(max_length=100)
     date=models.DateField(default=datetime.now())
     cutoff = models.FloatField()
