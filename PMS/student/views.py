@@ -77,6 +77,7 @@ def adduser(request):
         uname=request.POST.get('rollno')
         emailid=request.POST.get('email')
         epassword=request.POST.get('password')
+        
         user = User.objects.create_user(username=uname,
                                  email=emailid,
                                  password=epassword)
