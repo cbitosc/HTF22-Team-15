@@ -35,11 +35,11 @@
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Placements
                 </a>
-                <ul class="dropdown-menu">
+                <ul type = "disc"class="dropdown-menu">
                   <li><a class="dropdown-item" href="https://www.cbit.ac.in/wp-content/uploads/2019/03/Companies-visited-to-CBIT-06.12.2019.pdf">Recruiting Companies</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="https://www.cbit.ac.in/placement_post/year-wise-placements-2021/">Year Wise Placements</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="https://www.cbit.ac.in/wp-content/uploads/2019/03/Guidelines-06.12.2019.pdf">Hiring Guidelines</a></li>
                 </ul>
               </li>
             </ul>
@@ -48,31 +48,23 @@
           </div>
         </div>
     </nav>
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style = "margin-top: 20px; padding: 20px;">
+    <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="true" style = "margin-top: 20px; padding: 20px;">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active">
+        <div class="carousel-item active" data-bs-interval="2000">
           <img src="https://www.cbit.ac.in/wp-content/uploads/2022/06/De-shaw-placements-banner.jpeg" class="d-block w-100" alt="...">
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" data-bs-interval="2000">
           <img src="https://www.cbit.ac.in/wp-content/uploads/2022/03/2.jpg" class="d-block w-100" alt="...">
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" data-bs-interval="2000">
           <img src="https://www.cbit.ac.in/wp-content/uploads/2022/03/ariia-final.jpg" class="d-block w-100" alt="...">
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
     <section class="container" style = "margin-top: 40px;">
       <div class="row">
@@ -102,15 +94,15 @@
       <div class="carousel-inner" style = "background-color: #ECECEC;">
         <h3 style = "text-align: center">Top Recruiters</h3>
         <div class="carousel-item active">
-          <div class="row">
-            <div class="col-lg-4">
-              <img src="{% static 'student/images/accenture.png' %}" style = "width:100px; margin: auto;" class="d-block w-75" alt="Accenture">
+          <div class="row" style = "height:250px; padding-bottom:20px;padding-top:20px;">
+            <div class="col-lg-4" style = " padding-bottom:20px;padding-top:20px;">
+              <img src="{% static 'student/images/accenture.png' %}" style = "width = 200px;height:130px;margin: auto;" class="d-block w-75" alt="Accenture">
             </div>
-            <div class="col-lg-4">
-              <img src="{% static 'student/images/accolite.png' %}" class="d-block w-80" alt="Accenture">
+            <div class="col-lg-4" style = "padding-bottom:20px;padding-top:20px;">
+              <img src="{% static 'student/images/accolite.png' %}" style = "width = 200px;height:130px;margin: auto;" class="d-block w-80" alt="Accenture">
             </div>
-            <div class="col-lg-4">
-              <img src="{% static 'student/images/amazon.png' %}" class="d-block w-98" alt="Accenture">
+            <div class="col-lg-4" style = "padding-bottom:20px;padding-top:20px;">
+              <img src="{% static 'student/images/amazon.png' %}" style = "width = 200px;height:130px;margin: auto;"class="d-block w-98" alt="Accenture">
             </div>
             
         </div>
@@ -125,12 +117,8 @@
             <div class="col-lg-4">
               <img src="{% static 'student/images/linkedin.png' %}" class="d-block w-100" width = "75px" alt="Accenture">
             </div>
-            
         </div>
         </div>
-        
-        
-        
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -146,22 +134,22 @@
       <h3 style = "padding: 30px;text-align: center;">Placement Highlights</h3>
       <div class="row">
         <div class="col-lg-3" style = "padding: 10px;margin: 10 10;">
-          <img src="{% static 'student/images/Student.png' %}" style = "margin-left: 120px;" width = "40" alt="Students">
+          <img src="{% static 'student/images/100+companies.png' %}" style = "margin-left: 120px;" width = "40" alt="Students">
           <h3 style = "margin-left: 110px;">140+</h3>
           <p style = "margin-left: 100px;">Companies</p>
         </div>
         <div class="col-lg-3" style = "padding: 10px; margin:10 10 10 10">
-          <img src="{% static 'student/images/People.png' %}" style = "margin-left: 140px;" width = "40" alt="Placement">
+          <img src="{% static 'student/images/dream-companies.png' %}" style = "margin-left: 140px;" width = "40" alt="Placement">
           <h3 style = "margin-left: 125px;">2000+</h3>
           <p style = "margin-left: 100px;">Placement Offers</p>
         </div>
         <div class="col-lg-3" style = "padding: 10px; margin: 10 10 10 10">
-          <img src="{% static 'student/images/Companies.png' %}" style = "margin-left: 130px;" width = "40" alt="Companies">
+          <img src="{% static 'student/images/sp.png' %}" style = "margin-left: 130px;" width = "40" alt="Companies">
           <h3 style = "margin-left: 130px;">54L</h3>
           <p style = "margin-left: 100px;">Highest Package</pa>
         </div>
         <div class="col-lg-3" style = "padding: 10px; margin: 10 10 10 10">
-          <img src="{% static 'student/images/Companies.png' %}" style = "margin-left: 135px;" width = "40" alt="Companies">
+          <img src="{% static 'student/images/placements.png' %}" style = "margin-left: 135px;" width = "40" alt="Companies">
           <h3 style = "margin-left: 130px;">85%</h3>
           <p style = "margin-left: 100px;">of Placement Rate</pa>
         </div>
