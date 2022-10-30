@@ -37,14 +37,14 @@
     <form style="margin-left: 10px;padding: 10px;">
         <div class="form-group">
             <label for="InputName">Name of the Student</label>
-            <input type="name" class="form-control" id="InputName" aria-describedby="nameHelp" placeholder="Enter name">
+            <input type="name" class="form-control input-sm" id="InputName" aria-describedby="nameHelp" placeholder="Enter name">
         </div><br>
         <div class="form-group">
-          <label for="InputEmail1">Primary Email ID</label>
+          <label for="InputEmail1">Primary Email ID (College)</label>
           <input type="email1" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
         </div><br>
         <div class="form-group">
-            <label for="InputEmail2">Secondary Email ID</label>
+            <label for="InputEmail2">Secondary Email ID (Personal)</label>
             <input type="email2" class="form-control" id="InputEmail2" aria-describedby="emailHelp" placeholder="Enter email">
         </div><br>
         <div class="form-group">
@@ -70,10 +70,6 @@
                 <label class="form-check-label" for="exampleRadios2">
                   CSE-AIML
                 </label><br>
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option4">
-                <label class="form-check-label" for="exampleRadios2">
-                  CSE-AIML
-                </label><br>
                 <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option5">
                 <label class="form-check-label" for="exampleRadios2">
                   CSE-IOTBC
@@ -90,9 +86,16 @@
                 <label class="form-check-label" for="exampleRadios2">
                   EEE
                 </label><br>
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option8">
+                <label class="form-check-label" for="exampleRadios2">
+                  Other<input type="other" class="form-control input-normal" id="InputOther" aria-describedby="otherHelp">
+                </label><br>
               </div>
         </div><br>
-       
+        <div class="form-group">
+            <label for="InputCgpa">Current CGPA</label>
+            <input type="cgpa" class="form-control" id="InputCgpa" aria-describedby="cgpaHelp" placeholder="Enter current cgpa">
+        </div><br>
         <div class="form-group">
             <label for="InputPhone">Phone Number</label>
             <input type="phone" class="form-control" id="InputPhone" placeholder="Enter phone number">

@@ -11,8 +11,8 @@
 {% endfor %}
 </table>
 
-<table border="1">
-    
+<table>
+    {% if n %}
     {% for x in n %}
     <tr>
     <td>{{ x.name }}</td>
@@ -24,4 +24,5 @@
     <td>{{x.desc}}</td>
     </tr>
     {% endfor %}
+    {% endif %}
 </table>
