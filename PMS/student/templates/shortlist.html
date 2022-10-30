@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet"> 
+    <title>Shortlist</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'student/images/img.png' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <style>
-        
         table{
           width: 60%;
         }
@@ -39,13 +38,24 @@
               <li class="nav-link" href="/shortlist">Shortlist</li>
             </ul>
             <form class="d-flex" role="search">
-                <a class="nav-link active" style="padding: 5px;padding-right: 40px;" aria-current="page" href="#">Welcome <span>{{m.name}}</span></a>
+                <a class="nav-link active" style="padding: 5px;padding-right: 40px;" aria-current="page" href="#">Welcome</a>
                 <a class="btn btn-outline-danger" type="submit" href="/logout">Logout</a>
             </form>
             
           </div>
         </div>
     </nav>
+<<<<<<< HEAD
+    <table class="table table-striped">
+        <tr>
+          <th scope="col">Name of the Applicant</th>
+          <th scope="col">Company</th>
+          <th scope="col">Role</th>
+          <th scope="col">Status</th>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+=======
     <table style="position: relative;top: 50px;" class="table table-striped">
         <tr>
             <th scope="col">Name of the Applicant</th>]
@@ -66,6 +76,7 @@
         </tr>
 {% endfor %}
 </tbody>
+>>>>>>> 6006e95e6f5f3987291c2026b49993fefd8b80d1
     </table>
 </body>
 </html>
