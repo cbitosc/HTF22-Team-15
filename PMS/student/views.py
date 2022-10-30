@@ -1,3 +1,4 @@
+from sre_constants import BRANCH
 from telnetlib import AUTHENTICATION
 from urllib import request
 from django.shortcuts import render,redirect
@@ -64,8 +65,12 @@ def logout_request(request):
     messages.info(request, "Logged out successfully!")
     return redirect("/")
 def adduser(request):
-    user = User.objects.create_user(username='john',
+    if request.method=="POST":
+        branch=request.POST.get('exampleRadios')
+        print(branch)
+    return render(request,'form.html')
+    '''user = User.objects.create_user(username='john',
                                  email='jlennon@beatles.com',
-                                 password='glass onion')
+                                 password='glass onion')'''
 
     
