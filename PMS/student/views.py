@@ -106,17 +106,18 @@ def shortlist(request):
 
 def apply(request, cname):
     if request.user.POST:
-        rollno = request.POST['roll_no']
-        sname = request.POST['name'] 
-        company = Company.objects.get(jobid=jobid)
-        print(company)
+        rollno = request.POST.get['roll_no']
+        sname = request.POST.get['name'] 
+        company = request.POST.get['cname']
+        print(cname)
         sdetails= Student.objects.filter(roll_no=rollno).values()
+        c=Company.objects.filter(name=company).values()
         gpa = sdetails['gpa']
         if company['cutoff']<=gpa:
             status = "In progress"
         else:
             status = "Rejected"
-        application = Application(rollno=rollno,sname=sname,cname=company['name'],status=status)
+        application = Application(rollno=rollno,sname=sname,cname=company,status=status)
         application.save()
         return redirect('/shortlist')
     return render(request,'registration.html')
