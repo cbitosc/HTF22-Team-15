@@ -13,6 +13,7 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet"> 
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css"
@@ -24,7 +25,7 @@
     ></script>
     <!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
   </head>
-  <body>
+  <body style="font-family: 'Fira Sans', sans-serif;">
     <nav
       class="navbar navbar-expand-lg"
       style="background-color: #FDEDEC; margin-top: 20px"
@@ -80,7 +81,7 @@
           <ul><li>Minimum Cut-Off required: {{x.cutoff}}</li>
           <li>Average Package for the role: {{x.package}} LPA</li></ul>
         </list> </p>
-        <a href="/apply/{{ x.name }}" class="btn btn-primary">Apply</a>
+        <a href="/apply" class="btn btn-primary">Apply</a>
       </div>
     </div>
     <br />

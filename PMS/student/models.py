@@ -37,6 +37,7 @@ class Application(models.Model):
     sname=models.CharField(max_length=100)
     cname = models.CharField(max_length=100)
     status=models.CharField(max_length=50)
+    role=models.CharField(default='Software Engineer',max_length=100)
 
     def __str__(self):
         return str(self.sname)+"-"+str(self.cname)
