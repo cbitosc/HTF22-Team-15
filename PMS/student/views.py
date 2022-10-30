@@ -68,6 +68,7 @@ def adduser(request):
     if request.method=="POST":
         branch=request.POST.get('exampleRadios')
         print(branch)
+        return HttpResponse(branch)
     return render(request,'form.html')
     '''user = User.objects.create_user(username='john',
                                  email='jlennon@beatles.com',

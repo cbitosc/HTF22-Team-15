@@ -34,7 +34,8 @@
     </nav>
     <h2 style="margin-left: 10px;padding: 10px;">Student Registration Form</h2><br>
 
-    <form style="margin-left: 10px;padding: 10px;">
+    <form style="margin-left: 10px;padding: 10px;" method="post" action="/adduser">
+      {% csrf_token %}
         <div class="form-group">
             <label for="InputName">Name of the Student</label>
             <input type="name" class="form-control input-sm" name="name" aria-describedby="nameHelp" placeholder="Enter name">
